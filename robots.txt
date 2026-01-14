@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://furkangundogan66.github.io/sitemap.xml
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
