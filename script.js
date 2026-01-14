@@ -277,7 +277,55 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe cards
+// Floating Particles Animation
+function createFloatingParticles() {
+    const particleIcons = ['⚡', '🔮', '✨', '🎯', '💫', '🌀', '🔥', '⚙'];
+    const heroSection = document.querySelector('.hero');
+    
+    if (!heroSection) return;
+    
+    for (let i = 0; i < 8; i++) {
+        const particle = document.createElement('div');
+        particle.className = `particle particle-icon-${(i % 5) + 1}`;
+        particle.innerHTML = particleIcons[i];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = '100%';
+        particle.style.color = ['#6366f1', '#8b5cf6', '#ec4899', '#06b6d4'][Math.floor(Math.random() * 4)];
+        particle.style.opacity = Math.random() * 0.7 + 0.3;
+        heroSection.appendChild(particle);
+        
+        // Remove after animation completes
+        setTimeout(() => {
+            particle.remove();
+        }, 6000 + (i * 500));
+    }
+}
+
+// Create particles every 3 seconds
+setInterval(createFloatingParticles, 3000);
+createFloatingParticles();
+
+// Neon Text Pulse Effect
+const neonElements = document.querySelectorAll('.neon-element');
+neonElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+        this.style.animation = 'colorShift 1s ease-in-out';
+    });
+});
+
+// Enhanced Button Hover Effects
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) translateY(-2px)';
+            this.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0.6)';
+        });
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+});// Observe cards
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.service-card, .product-card, .stat');
     cards.forEach((card, index) => {
