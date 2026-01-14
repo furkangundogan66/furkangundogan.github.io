@@ -1,38 +1,50 @@
-name: Deploy to GitHub Pages
+# GitHub Pages'e Dağıtım Workflow
+# Bu workflow, main branch'a her push yapıldığında sayfayı otomatik olarak yayınlar
+
+name: GitHub Pages'e Dağıt
 
 on:
+  # main branch'a her push'ta çalış
   push:
     branches:
       - main
+  # Manuel olarak çalıştırmak için workflow_dispatch seçeneği
   workflow_dispatch:
 
+# Gerekli izinler
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Eşzamanlı deployment'ları yönet
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
   deploy:
+    # GitHub Pages ortamı
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # Adım 1: Repository'yi klonla
+      - name: Repository'yi İndir
         uses: actions/checkout@v3
 
-      - name: Setup Pages
+      # Adım 2: GitHub Pages'i konfigüre et
+      - name: GitHub Pages Ayarlarını Yapılandır
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
+      # Adım 3: Dosyaları artifact olarak yükle
+      - name: Dosyaları Yükle
         uses: actions/upload-pages-artifact@v2
         with:
           path: '.'
 
-      - name: Deploy to GitHub Pages
+      # Adım 4: GitHub Pages'e dağıt
+      - name: GitHub Pages'e Dağıt
         id: deployment
         uses: actions/deploy-pages@v2
