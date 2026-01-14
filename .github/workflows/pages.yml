@@ -40,11 +40,11 @@ jobs:
 
       # Adım 3: Dosyaları artifact olarak yükle
       - name: Dosyaları Yükle
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
       # Adım 4: GitHub Pages'e dağıt
       - name: GitHub Pages'e Dağıt
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
