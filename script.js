@@ -2,11 +2,13 @@
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
-// Check saved theme preference
-const savedTheme = localStorage.getItem('theme') || 'light';
+// Check saved theme preference - Default to dark
+const savedTheme = localStorage.getItem('theme') || 'dark';
 if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
     themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
 }
 
 themeToggle.addEventListener('click', () => {
@@ -32,39 +34,68 @@ if (contactForm) {
         
         // Validate
         if (!name || !email || !subject || !message) {
-            formStatus.textContent = 'Lütfen tüm gerekli alanları doldurunuz!';
+            formStatus.textContent = '✗ Lütfen tüm gerekli alanları doldurunuz!';
             formStatus.className = 'form-status error';
             return;
         }
         
-        // Prepare email content
-        const emailContent = `
-Ad: ${name}
-E-mail: ${email}
-Telefon: ${phone || 'Verilmedi'}
-Konu: ${subject}
-
-Mesaj:
-${message}
-        `;
+        // Validate email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            formStatus.textContent = '✗ Geçerli bir e-mail adresi girin!';
+            formStatus.className = 'form-status error';
+            return;
+        }
         
-        // Create mailto link
-        const mailtoLink = `mailto:info@furkangundogan.com?subject=${encodeURIComponent(`Yeni İstek: ${subject}`)}&body=${encodeURIComponent(emailContent)}`;
+        // Show processing
+        formStatus.textContent = '⏳ Mesajınız gönderiliyor...';
+        formStatus.className = 'form-status processing';
         
-        // Show success message
-        formStatus.textContent = '✓ Mesajınız hazırlandı! E-mail uygulaması açılıyor...';
-        formStatus.className = 'form-status success';
+        // Prepare data
+        const formData = {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message,
+            timestamp: new Date().toISOString()
+        };
         
-        // Open mailto after delay
-        setTimeout(() => {
-            window.location.href = mailtoLink;
-            // Reset form
-            setTimeout(() => {
+        // Send to formspree or similar service
+        fetch('https://formspree.io/f/xyzpqrst', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                formStatus.textContent = '✓ Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.';
+                formStatus.className = 'form-status success';
                 contactForm.reset();
-                formStatus.textContent = '';
-                formStatus.className = 'form-status';
-            }, 500);
-        }, 1000);
+                
+                // Clear status after 5 seconds
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                    formStatus.className = 'form-status';
+                }, 5000);
+            } else {
+                throw new Error('Network error');
+            }
+        })
+        .catch(error => {
+            // Fallback to mailto if formspree fails
+            const emailContent = `Ad: ${name}%0AE-mail: ${email}%0ATelefon: ${phone || 'Verilmedi'}%0AKonu: ${subject}%0A%0AMesaj:%0A${message}`;
+            const mailtoLink = `mailto:info@furkangundogan.com?subject=Yeni İstek: ${subject}&body=${emailContent}`;
+            
+            formStatus.textContent = '✓ Mesajınız e-mail uygulamasıyla gönderilecek...';
+            formStatus.className = 'form-status success';
+            
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 1000);
+        });
     });
 }
 

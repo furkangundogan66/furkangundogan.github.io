@@ -10,14 +10,14 @@ html {
 }
 
 :root {
-    --primary: #667eea;
-    --secondary: #764ba2;
-    --accent: #f093fb;
-    --dark: #1a1a2e;
-    --light: #f8f9fa;
-    --text: #333;
-    --text-light: #666;
-    --border: #e0e0e0;
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --accent: #ec4899;
+    --dark: #0f172a;
+    --light: #f1f5f9;
+    --text: #f1f5f9;
+    --text-light: #cbd5e1;
+    --border: #334155;
     --success: #10b981;
     --error: #ef4444;
 }
@@ -26,7 +26,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: white;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    min-height: 100vh;
 }
 
 .container {
@@ -44,9 +45,9 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     padding: 1rem 0;
     position: sticky;
     top: 0;
