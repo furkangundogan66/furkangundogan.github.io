@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yazılım Otomasyonu ve Teknoloji Çözümleri">
+    <title>TechAuto Solutions - Yazılım & Teknoloji İnovasyonu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>TechAuto Solutions</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#fiyatlandirma">Fiyatlar</a></li>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle" title="Tema Değiştir">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars"></div>
+        <div class="hero-content">
+            <h1>Yazılım Otomasyonu & <span class="gradient-text">Teknoloji İnovasyonu</span></h1>
+            <p>İşletmenizin verimliliğini arttırmak için AI-destekli otomasyonlar ve en güncel teknoloji çözümleri</p>
+            <div class="hero-buttons">
+                <button class="cta-btn primary" onclick="document.getElementById('iletisim').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-rocket"></i> Hemen Başlayın
+                </button>
+                <button class="cta-btn secondary" onclick="document.getElementById('urunler').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-arrow-right"></i> Daha Fazla Bilgi
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">
+                <i class="fas fa-robot"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="hizmetler" class="services">
+        <div class="container">
+            <h2 class="section-title">Sunduğum Hizmetler</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Yazılım Otomasyonu</h3>
+                    <p>İş süreçlerinizi otomatikleştirerek zaman kaybını ortadan kaldırın. RPA, API entegrasyonu ve özel otomasyon çözümleri.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Bilgisayar Donanımı Satışı</h3>
+                    <p>Yüksek performanslı bilgisayarlar, sunucular ve teknoloji donanımları. Kurumsal çözümlerden kişisel sistemlere kadar.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Sistem Kurulumu & Entegrasyon</h3>
+                    <p>İşletmenizin IT altyapısını kurun, yapılandırın ve optimize edin. Veri merkezlerinden masaüstü sistemlerine kadar.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Teknik Destek & Bakım</h3>
+                    <p>24/7 teknik destek ve sistem bakım hizmetleri. Sorunların hızlı çözülmesi ve sistem performansının korunması.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Danışmanlık & Optimizasyon</h3>
+                    <p>İşletmenizin teknoloji ihtiyaçlarını analiz edip en uygun çözümleri sunuyorum. Maliyet-fayda optimizasyonu.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Özel Yazılım Geliştirme</h3>
+                    <p>Türüne göre özel yazılım ve otomasyon çözümleri. İşletmenizin spesifik ihtiyaçlarına uyarlanmış projeler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="urunler" class="products">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Ürünler & Çözümler</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Popüler</div>
+                    <h3>Enterprise Automation Suite</h3>
+                    <p>Kurumsal otomasyon ve iş akışı yönetimi çözümü</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Workflow Otomasyonu</li>
+                        <li><i class="fas fa-check"></i> Veri Entegrasyonu</li>
+                        <li><i class="fas fa-check"></i> Raporlama & Analytics</li>
+                        <li><i class="fas fa-check"></i> 24/7 Destek</li>
+                    </ul>
+                    <button class="product-btn">Detaylı Bilgi Al</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Yeni</div>
+                    <h3>Bulut Altyapısı Çözümü</h3>
+                    <p>Ölçeklenebilir ve güvenli bulut tabanlı sunucu ve depolama</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Sınırsız Ölçeklenebilirlik</li>
+                        <li><i class="fas fa-check"></i> Veri Güvenliği</li>
+                        <li><i class="fas fa-check"></i> Yedekleme & Kurtarma</li>
+                        <li><i class="fas fa-check"></i> Kolay Yönetim</li>
+                    </ul>
+                    <button class="product-btn">Detaylı Bilgi Al</button>
+                </div>
+                <div class="product-card">
+                    <h3>Gömülü Sistem Paketleri</h3>
+                    <p>Güncel bilgisayar ve sunucu paketleri uygun fiyatlarla</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Yüksek Performans</li>
+                        <li><i class="fas fa-check"></i> Garanti Hizmeti</li>
+                        <li><i class="fas fa-check"></i> Kurulum Desteği</li>
+                        <li><i class="fas fa-check"></i> Teknik Bakım</li>
+                    </ul>
+                    <button class="product-btn">Detaylı Bilgi Al</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="fiyatlandirma" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Fiyatlandırma Planları</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Başlangıç</h3>
+                        <div class="price">
+                            <span class="amount">₺2,999</span>
+                            <span class="period">/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5 Otomasyon Projesi</li>
+                        <li><i class="fas fa-check"></i> Email Desteği</li>
+                        <li><i class="fas fa-check"></i> Temel Raporlama</li>
+                        <li><i class="fas fa-times"></i> 24/7 Telefon Desteği</li>
+                        <li><i class="fas fa-times"></i> Özel Yazılım Geliştirme</li>
+                    </ul>
+                    <button class="pricing-btn">Başla</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="featured-badge">En Popüler</div>
+                    <div class="pricing-header">
+                        <h3>Profesyonel</h3>
+                        <div class="price">
+                            <span class="amount">₺5,999</span>
+                            <span class="period">/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Sınırsız Otomasyonlar</li>
+                        <li><i class="fas fa-check"></i> Öncelikli Telefon Desteği</li>
+                        <li><i class="fas fa-check"></i> Gelişmiş Raporlama</li>
+                        <li><i class="fas fa-check"></i> 24/7 Destek</li>
+                        <li><i class="fas fa-times"></i> Özel Yazılım Geliştirme</li>
+                    </ul>
+                    <button class="pricing-btn featured-btn">Şimdi Seç</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Kurumsal</h3>
+                        <div class="price">
+                            <span class="amount">₺9,999</span>
+                            <span class="period">/ay</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Tüm Hizmetler</li>
+                        <li><i class="fas fa-check"></i> Dedike Destek Ekibi</li>
+                        <li><i class="fas fa-check"></i> Özel Yazılım Geliştirme</li>
+                        <li><i class="fas fa-check"></i> API Entegrasyonu</li>
+                        <li><i class="fas fa-check"></i> Danışmanlık Hizmeti</li>
+                    </ul>
+                    <button class="pricing-btn">İletişime Geç</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Müşteri Yorumları</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Furkan'ın otomasyonu sayesinde raporlama işlemlerimiz 10 saatden 1 saate düştü. Harika bir danışman!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AR</div>
+                        <div>
+                            <h4>Ahmet Res</h4>
+                            <p>İnsan Kaynakları Müdürü</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Teknik destek hızlı, profesyonel ve çok yardımcı. Bilgisayar alımında da tam istediğimiz konfigürasyonu sağladı."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MB</div>
+                        <div>
+                            <h4>Meriç Başkan</h4>
+                            <p>Bilgisayar Mühendisi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"API entegrasyonu sayesinde veri tabanlarımız otomatik olarak senkronize olmaya başladı. Çok başarılı bir proje."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EC</div>
+                        <div>
+                            <h4>Emre Çetin</h4>
+                            <p>CTO - Yazılım Şirketi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimda" class="about">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Furkan Gündoğan</h3>
+                    <p>Yazılım geliştirme ve sistem otomasyonu alanında 5+ yıl deneyime sahip bir profesyonelim. Küçük işletmelerden büyük kurumsal çözümlere kadar geniş bir yelpazeye hizmet veriyorum.</p>
+                    <p>Müşteri memnuniyeti ve kaliteli hizmet anlayışımla, her projeyi etkin bir şekilde tamamlıyorum. İnovasyonla birlikte uygun maliyetli çözümler sunmayı hedefliyorum.</p>
+                    <div class="skills">
+                        <h4>Yeteneklerim:</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Python Otomasyonu</span>
+                            <span class="skill-tag">RPA</span>
+                            <span class="skill-tag">API Entegrasyonu</span>
+                            <span class="skill-tag">Sistem Yönetimi</span>
+                            <span class="skill-tag">Ağ Kurulumu</span>
+                            <span class="skill-tag">Bulut Çözümleri</span>
+                            <span class="skill-tag">Veritabanı Yönetimi</span>
+                            <span class="skill-tag">Web Geliştirme</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-counter" data-target="100">0</div>
+                        <p>Tamamlanan Proje</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-counter" data-target="50">0</div>
+                        <p>Memnun Müşteri</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-counter" data-target="99">0</div>
+                        <p><span>%</span> Memnuniyet Oranı</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-counter" data-target="5">0</div>
+                        <p>Yıl Deneyim</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Otomasyonun kurulması ne kadar sürer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Proje karmaşıklığına bağlı olarak 2-8 hafta arasında değişir. Basit otomasyonlar birkaç gün içinde tamamlanabilir, kurumsal çözümler daha fazla zaman gerektirir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Donanım satın alırken nasıl yardımcı olursunuz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ihtiyaçlarınızı analiz ederek en uygun konfigürasyonu önerir, kaliteli tedarikçilerden temin eder ve kurulum/konfigürasyonunu yapıyorum. Garanti hizmeti de sağlıyorum.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>24/7 destek gerçekten var mı?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, Profesyonel ve Kurumsal planlarımızda 24/7 teknik destek bulunmaktadır. Acil durumlarda hızlı müdahale sağlıyorum.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Hangi yazılımlarla çalışıyorsunuz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Python, C#, JavaScript, SQL ve daha birçok teknoloji ile çalışıyorum. Ayrıca SAP, Oracle, Salesforce gibi enterprise çözümleriyle de entegrasyon yapıyorum.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proje sırasında nasıl iletişim kurarız?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Düzenli raporlama, haftalık toplantılar ve acil durumlarda anında iletişim sağlıyorum. Tercih ettiğiniz iletişim kanalını kullanabiliriz.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Eğitim desteği var mı?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, tüm çözümlerin kurulum ve kullanımı için detaylı eğitim ve dokümantasyon sağlıyorum. Takımınızın hızlıca adaptasyonunu sağlarız.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Çalıştığım Markalar & Teknolojiler</h2>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="partner-logo">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="partner-logo">
+                    <i class="fab fa-docker"></i>
+                    <p>Docker</p>
+                </div>
+                <div class="partner-logo">
+                    <i class="fab fa-aws"></i>
+                    <p>AWS</p>
+                </div>
+                <div class="partner-logo">
+                    <i class="fas fa-database"></i>
+                    <p>SQL Server</p>
+                </div>
+                <div class="partner-logo">
+                    <i class="fas fa-cloud"></i>
+                    <p>Azure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="iletisim" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişime Geçin</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:info@furkangundogan.com">info@furkangundogan.com</a></p>
+                            <p><a href="mailto:destek@furkangundogan.com">destek@furkangundogan.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+905XXXXXXXXX">+90 5XX-XXX-XXXX</a></p>
+                            <p>Pazartesi-Cuma: 09:00-18:00</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Türkiye</p>
+                            <p>Web Tabanlı Hizmetler</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pzt-Cuma: 09:00 - 18:00</p>
+                            <p>Cmt-Paz: Randevu ile</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-header">
+                        <h3>Bize Mesaj Gönderin</h3>
+                        <p>Formunuzu doldurun, size en kısa sürede dönüş yapacağız</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Adınız *</label>
+                            <input type="text" id="name" placeholder="Tam adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> E-mail *</label>
+                            <input type="email" id="email" placeholder="E-mail adresiniz" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Telefon</label>
+                        <input type="tel" id="phone" placeholder="Telefon numaranız">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject"><i class="fas fa-heading"></i> Konu *</label>
+                        <select id="subject" required>
+                            <option value="">Konu seçiniz</option>
+                            <option value="yazilim-otomasyonu">Yazılım Otomasyonu</option>
+                            <option value="donanim-satisi">Donanım Satışı</option>
+                            <option value="sistem-kurulumu">Sistem Kurulumu</option>
+                            <option value="teknik-destek">Teknik Destek</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-message"></i> Mesajınız *</label>
+                        <textarea id="message" placeholder="Detaylı mesajınız..." rows="6" required></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">Gizlilik politikasını okudum ve kabul ediyorum</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Mesaj Gönder
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechAuto Solutions</h4>
+                    <p>Yazılım otomasyonu ve teknoloji çözümlerinde güvenilir ortağınız</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#hizmetler">Hizmetler</a></li>
+                        <li><a href="#urunler">Ürünler</a></li>
+                        <li><a href="#fiyatlandirma">Fiyatlandırma</a></li>
+                        <li><a href="#hakkimda">Hakkımda</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sosyal Ağlar</h4>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechAuto Solutions. Tüm hakları saklıdır. | Son Güncelleme: Ocak 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Yukarı Git">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
